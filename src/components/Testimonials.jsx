@@ -21,14 +21,34 @@ export default function Testimonials({ data }) {
 		}
 	});
 
+	const [slideSpeed, setSlideSpeed] = React.useState(() => {
+		if (window.innerWidth < 500) {
+			return 5000;
+		} else if (window.innerWidth <= 1000) {
+			return 3000;
+		}else {
+            return 2000;
+        }
+	});
+
+	const [autoplaySpeed, setAutoPlaySpeed] = React.useState(() => {
+		if (window.innerWidth < 500) {
+			return 2000;
+		} else if (window.innerWidth <= 1000) {
+			return 3000;
+		}else {
+            return 4000;
+        }
+	});
+
 	const settings = {
 		dots: true,
 		infinite: true,
 		slidesToShow: slidesToShow,
 		slidesToScroll: 1,
 		autoplay: true,
-		speed: 2000,
-		autoplaySpeed: 2000,
+		speed: slideSpeed,
+		autoplaySpeed: autoplaySpeed,
 		cssEase: 'linear',
 	};
 
@@ -37,10 +57,16 @@ export default function Testimonials({ data }) {
 
 		if (windowWidth < 500) {
 			setSlidesToShow(1);
+			setSlideSpeed(5000);
+            setAutoPlaySpeed(2000);
 		} else if (windowWidth <= 1000) {
-			setSlidesToShow(2);
+            setSlidesToShow(2);
+			setSlideSpeed(3000);
+            setAutoPlaySpeed(3000);
 		} else {
-			setSlidesToShow(3);
+            setSlidesToShow(3);
+			setSlideSpeed(2000);
+            setAutoPlaySpeed(3000);
 		}
 	};
 
