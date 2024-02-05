@@ -1,0 +1,108 @@
+@import './colors';
+
+#contact {
+	padding: 4rem 2rem;
+	border-radius: 4rem;
+	background-color: $color5;
+
+	h2 {
+		text-align: center;
+		font-size: 3rem;
+		margin-bottom: 5rem;
+	}
+
+	.contact-item {
+		margin: 2rem auto;
+		width: 100%;
+
+		& > .name:not(.whatsapp) {
+			margin-top: 4rem;
+			margin-bottom: 2rem;
+			text-align: center;
+			font-size: 3rem;
+			color: #333;
+			font-weight: 900;
+			letter-spacing: 0.5rem;
+		}
+
+		img {
+			width: 100%;
+			border-radius: 50%;
+			border: 1rem solid #fff;
+		}
+
+		#message {
+			margin-top: 3rem;
+			width: 100%;
+			padding: 1rem;
+			font-size: 2rem;
+			font-family: 'Montserrat', sans-serif;
+			// font-family: 'Montserrat Alternates', sans-serif;
+			/* font-family: 'Roboto', sans-serif; */
+		}
+
+		.whatsapp {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			position: relative;
+			margin-top: 3rem;
+			box-sizing: border-box;
+			border: 2px solid $color4;
+			color: $color4;
+			border-radius: 4rem;
+			background-color: #fff;
+			padding: 0.5rem;
+			font-weight: 600;
+
+			// &::after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	display: block;
+			// 	width: 70%;
+			// 	height: 4px;
+			// 	background-color: #333;
+			// 	bottom: -10px;
+			// }
+
+			.whatsapp-icon {
+				margin-right: 1rem;
+				font-size: 4rem;
+			}
+
+			&:hover {
+				color: #fff;
+				background-color: $color4;
+
+				.whatsapp-icon {
+					color: #fff;
+				}
+
+				// &::after {
+				// 	background-color: #fff;
+				// }
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 400px) {
+	#contact {
+		.contact-item {
+			width: 300px;
+		}
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	#contact {
+		h2 {
+			font-size: 4rem;
+		}
+
+		.contact-item {
+			width: 400px;
+		}
+	}
+}

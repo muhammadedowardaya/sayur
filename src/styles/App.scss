@@ -1,0 +1,13 @@
+@import './colors';
+
+.app {
+	color: $color1;
+	padding: 6rem 2rem;
+	position: relative;
+}
+
+@media only screen and (min-width: 700px) {
+	.app {
+		padding: 0 4rem;
+	}
+}

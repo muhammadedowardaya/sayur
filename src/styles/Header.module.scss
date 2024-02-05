@@ -1,0 +1,55 @@
+@import './colors';
+
+.Header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem 0 2rem 0;
+
+	h1 {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 3rem;
+		color: $color4;
+		text-align: center;
+		margin: 4rem 0 2rem 0;
+		width: 100%;
+	}
+
+	p {
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		line-height: 2rem;
+		color: $color3;
+		width: 80%;
+	}
+}
+
+.banner {
+	margin-top: 6rem;
+	width: 100%;
+
+	img {
+		width: 100%;
+		height: 300px;
+		border-radius: 3rem;
+		object-fit: cover;
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	.Header {
+		margin-top: 4rem;
+		padding: 6rem 0 2rem 0;
+		h1 {
+			width: 80%;
+			font-size: 5rem;
+		}
+
+		p {
+			width: 60%;
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
+}
